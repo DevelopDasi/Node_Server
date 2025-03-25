@@ -37,9 +37,8 @@ const options = {
 };
 
 // Endpoint שמחזיר את רשימת האפליקציות המותקנות
-app.get(()=>{
-    res.send('Hello World');
-});
+app.get(('', (req, res) => { res.send('Hello World'); })
+);
 app.get('/api/render-services', (req, res) => {
     axios
         .request(options)
